@@ -1,0 +1,27 @@
+package basicNumbers;
+
+public class Decimal_To_Binary {
+
+	public static void main(String[] args) {
+
+		
+		double binary_num = Decimal_To_Binary();
+		
+
+	}
+
+	private static double Decimal_To_Binary() {
+		// TODO Auto-generated method stub
+		double binary_num = 0;
+		double decimal_num = 0;
+		while (decimal_num >0) {
+			double reminder = decimal_num %2;
+			binary_num = reminder+binary_num;
+			decimal_num /=2;
+			
+		}
+		return binary_num;
+		
+	}
+
+}

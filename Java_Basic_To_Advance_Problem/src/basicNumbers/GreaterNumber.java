@@ -1,0 +1,31 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class GreaterNumber {
+
+	public static int greaternumber(int a,int b) {
+	
+		if (a == b) {
+			System.out.println("both are equal");
+		}else if( a < b) {
+			System.out.println(" a is less then b  value of b is "+ b);
+		}else if(b < a) {
+			System.out.println(" b is less then a value of a is "+a);
+		}
+		return 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		System.out.println(greaternumber(a, b));
+		
+		
+
+	}
+
+}

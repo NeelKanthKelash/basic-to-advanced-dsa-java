@@ -1,0 +1,107 @@
+package com.practice.problems;
+import java.util.Scanner;
+
+class Node{
+    int data;
+    Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class Linkedlist {
+    Node head;
+
+    public Linkedlist() {
+        head = null;
+    }
+
+    // Function to insert a new node at the end
+    public void append(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
+        last.next = newNode;
+    }
+
+    // Function to delete nodes with values greater than 25
+    public void deleteGreaterThan25() {
+        Node current = head;
+
+        // Handle cases where head node itself needs to be deleted
+        while (current != null && current.data > 25) {
+            head = current.next;
+            current = head;
+        }
+
+        // Now delete nodes which have values greater than 25
+        Node prev = null;
+        while (current != null) {
+            if (current.data > 25) {
+                prev.next = current.next;
+            } else {
+                prev = current;
+            }
+            current = current.next;
+        }
+    }
+
+    // Function to display the linked list
+    public void display() {
+        Node current = head;
+        if (current == null) {
+            System.out.println("The linked list is empty.");
+            return;
+        }
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+        System.out.println("None");
+    }
+}
+
+public class LinkedListMain {
+
+    public static void main(String[] args) {
+        Linkedlist ll = new Linkedlist();
+        try (Scanner scanner = new Scanner(System.in)) {
+			// Taking input from the user
+			System.out.println("Enter numbers between 1 and 50 to add to the linked list (enter 'done' to stop):");
+			while (true) {
+			    System.out.print("Enter a number: ");
+			    String value = scanner.nextLine();
+			    if (value.equalsIgnoreCase("done")) {
+			        break;
+			    }
+			    try {
+			        int num = Integer.parseInt(value);
+			        if (num >= 1 && num <= 50) {
+			            ll.append(num);
+			        } else {
+			            System.out.println("Please enter a number between 1 and 50.");
+			        }
+			    } catch (NumberFormatException e) {
+			        System.out.println("Invalid input. Please enter a valid integer.");
+			    }
+			}
+		}
+
+        System.out.println("\nOriginal Linked List:");
+        ll.display();
+
+        // Deleting nodes with values greater than 25
+        ll.deleteGreaterThan25();
+
+        System.out.println("\nLinked List after deleting nodes with values greater than 25:");
+        ll.display();
+    }
+}

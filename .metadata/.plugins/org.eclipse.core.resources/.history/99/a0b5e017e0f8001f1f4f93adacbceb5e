@@ -1,0 +1,27 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class CircumFarence_Of_Circle {
+
+	private static double c;
+
+
+	public static double circumFarence(double r, double c) {
+		 c = 2*Math.PI*r;
+		 return c;
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// 
+		Scanner sc = new Scanner(System.in);
+		double r = sc.nextDouble();
+		
+		System.out.println(circumFarence(c, r));
+		
+
+	}
+
+}

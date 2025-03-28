@@ -1,0 +1,18 @@
+package com.projects.practice;
+
+import javax.swing.JFrame;
+
+public class Age_Calculator {
+
+	public static void main(String[] args) {
+		JFrame myFrame = new JFrame();
+		String mytitle = "Bank Frame";
+		
+		myFrame.setTitle(mytitle);
+		myFrame.setSize(300,300);
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setVisible(false);
+		
+	}
+
+}

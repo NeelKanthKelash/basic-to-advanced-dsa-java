@@ -1,0 +1,10 @@
+package com.practice.recursion;
+
+public class Move_all_X_end_String {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

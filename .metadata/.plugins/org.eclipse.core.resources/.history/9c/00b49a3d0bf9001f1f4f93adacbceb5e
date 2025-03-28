@@ -1,0 +1,40 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Inputs_Of_Users {
+
+	public static void countNumber(int numberInput) {
+		Scanner sc = new Scanner(System.in);
+		
+		int positivecount = 0, negativecount = 0, zero = 0;
+		for (int i = 1; i < numberInput; i++) {
+			int number = sc.nextInt();
+			if(number > 0) {
+				positivecount++;
+				
+			}else if(number < 0) {
+				negativecount++;
+			}else {
+				zero++;
+			}
+		}
+		System.out.println("positive Counted "+positivecount);
+		System.out.println("negative Counted "+negativecount);
+		System.out.println("zero Counted "+ zero);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		 int numInputs = sc.nextInt();
+		 countNumber(numInputs);
+		 
+		
+		
+
+	}
+
+}

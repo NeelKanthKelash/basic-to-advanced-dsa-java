@@ -1,0 +1,9 @@
+package com.projects.practice;
+
+public class Age_Calculator {
+
+	public static void main(String[] args) {
+
+	}
+
+}

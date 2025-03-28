@@ -1,0 +1,32 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Reverse_A_Number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int reverse = 0;
+		int original = n;
+		
+		while(n != 0) {
+			int reminder = n%10;
+			 reverse = reverse*10+reminder;
+			 n /= 10;
+		}
+		if(original % 10 == 0) {
+			System.out.println("Reversed number :"+reverse);
+			while (original % 10 == 0) {
+				System.out.println("0");
+				original /= 10;
+			}
+			
+		}else {
+			System.out.println("Reversed number :"+reverse);
+		}
+		return;
+	}
+	
+}

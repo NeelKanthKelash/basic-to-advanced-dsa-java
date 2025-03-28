@@ -1,0 +1,23 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Number_Count {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int count = 0;
+		if(n<= 10000) {
+		while (n != 0) {
+			n /= 10;
+			++count;
+		}
+		System.out.println("number of digit count is :"+count);
+		
+	}else { System.out.println("The number is less then thousednd ");}
+	}
+
+}

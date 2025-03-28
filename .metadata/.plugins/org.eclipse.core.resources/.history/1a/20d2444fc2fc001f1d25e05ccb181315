@@ -1,0 +1,38 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Decimal_To_Binary {
+
+	public static void main(String args[]) {
+// decimal to binary;
+	
+/*	int n = 25;
+	String binary = "";
+	while(n >0) {
+		int bit = n%2;
+		binary = bit+binary;
+		n = n/2;
+	}
+	System.out.println("BInary Representation: "+ binary);
+*/
+// binary to decimal;
+	
+	Scanner sc = new Scanner(System.in);
+	
+long binary, decimal= 0, j = 1, reminder;
+	System.out.println("Input a binary number: ");
+	binary = sc.nextLong();
+	while (binary != 0) {
+		reminder = binary % 10;
+		decimal = decimal + reminder *j;
+		j = j*2;
+		binary = binary / 10;
+		System.out.println(" binary is :" +binary+" j is"+j);
+	}
+	System.out.println("Decimal Number:"+decimal);
+	
+
+}
+
+}

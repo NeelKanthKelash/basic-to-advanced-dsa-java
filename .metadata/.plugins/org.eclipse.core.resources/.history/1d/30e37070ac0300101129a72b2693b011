@@ -1,0 +1,19 @@
+package com.practice.recursion;
+
+public class Towe_Of_Hanoi {
+
+	public static void towerOfHanoi(int n, String src, String helper,String dest) {
+		if (n == 1) {
+			System.out.println("transfer desk "+ n +" From "+ src +" to "+ dest);
+			return;
+		}
+		// transfer top n-1 from src to helper using dest as 'helper'
+		towerOfHanoi(n-1, src, dest, helper);
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

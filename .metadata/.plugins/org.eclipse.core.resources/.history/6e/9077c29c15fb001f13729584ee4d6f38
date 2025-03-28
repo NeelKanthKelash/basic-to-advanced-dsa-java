@@ -1,0 +1,23 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void palindromeCheck(int n) {
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		int temp = n;
+		if(n != 0 ) {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+
+}

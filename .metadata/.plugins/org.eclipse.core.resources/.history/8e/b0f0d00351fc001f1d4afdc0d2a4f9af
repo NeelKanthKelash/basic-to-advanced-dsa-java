@@ -1,0 +1,31 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Count_Repeated_Number {
+	
+	
+	public static int coutOccurence(int n, int d) {
+		int count = 0;
+		
+		while(n> 0) {
+			count = (n%10 == d)?
+					count +1: count;
+			n = n/10;
+		}
+		return count;
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.print("Enter number to count find ");
+		int d = sc.nextInt();
+		System.out.print("enter numbers ");
+		
+		System.out.println(coutOccurence(n, d));
+	}
+
+}

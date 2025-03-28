@@ -1,0 +1,35 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class LCM {
+	public static int lcm(int n, int m) {
+	int  larger = Math.max(n, m);
+		
+		while (true) {
+			if (larger %n == 0 && larger % m == 0 ) {
+				return larger;
+			}
+			larger += Math.max(n, m);
+			
+		
+		 
+		System.out.println(n);
+	}
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number");
+		int n = sc.nextInt();
+		System.out.println("Enter dividor");
+		int m = sc.nextInt();
+		System.out.println(lcm(n, m));
+	
+
+	}
+
+}

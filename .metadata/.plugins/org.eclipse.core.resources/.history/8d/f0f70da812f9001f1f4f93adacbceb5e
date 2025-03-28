@@ -1,0 +1,43 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Inputs_Of_Users {
+
+    public static void countNumber() {
+        Scanner sc = new Scanner(System.in);
+
+        int positivecount = 0, negativecount = 0, zero = 0;
+        
+        while (true) {
+            if (sc.hasNextInt()) {
+                int numberInput = sc.nextInt();
+                
+                if (numberInput > 0) {
+                    positivecount++;
+                } else if (numberInput < 0) {
+                    negativecount++;
+                } else {
+                    zero++;
+                }
+            } else if (sc.hasNext()) {
+                String input = sc.next();
+                
+                // Check if the input is an alphabet or a space
+                if (input.matches("[a-zA-Z ]")) {
+                    break; // Exit the loop if input is a letter or space
+                }
+            }
+        }
+
+        // Output the counts
+        System.out.println("positive Counted " + positivecount);
+        System.out.println("negative Counted " + negativecount);
+        System.out.println("zero Counted " + zero);
+    }
+
+    public static void main(String[] args) {
+        // Call the method to count numbers
+        countNumber();
+    }
+}

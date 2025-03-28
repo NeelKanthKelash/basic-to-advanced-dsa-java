@@ -1,0 +1,25 @@
+package basicNumbers;
+
+import java.util.Scanner;
+
+public class Eligible_For_Vot {
+
+	public static double eligibleForVot(double age) {
+		if(age >= 18) {
+			System.out.println("You are eligible for vot.. ");
+		}else {
+			System.out.println("You are not eligible for vot..");
+		}
+		return age;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		
+		double age = sc.nextDouble();
+		System.out.println(eligibleForVot("Your age is  "+age));
+	}
+
+}
